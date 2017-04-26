@@ -1,0 +1,160 @@
+body {
+    background: url(../images/back1.gif);
+    color: white; 
+    margin: 0;
+}
+
+#wrapper {
+    background: url(../images/back2.png) no-repeat center top;
+}
+
+header {
+    background-color: black;
+    text-align:center;
+    border-radius: 10px 10px 0 0;
+    padding: 1em 2em;
+    & h1 {
+        text-align: center;
+        font-size: 2em;
+    }
+    & h2 {
+        text-align: center;
+        text-transform: uppercase;
+        color: rgba(255,255,255,0.5);
+    }
+}
+
+#logo {
+    text-align: center;
+}
+
+.logo-img {
+    position: relative;
+    margin: 10px 10px 10px 10px;
+    display: inline-block;
+}
+
+
+a {
+    color: lightskyblue;
+    &:hover {
+        color: dodgerblue;
+        text-decoration: none;
+    }
+}
+
+.u-url {
+    text-decoration: none;
+}
+
+#navbar {
+    text-align: center;
+    letter-spacing: 0;
+    margin-bottom: 0.5em;
+}
+
+nav {
+    & ul {
+        display: inline-block;
+        list-style-type: none;
+        margin: auto;
+        padding: 0; 
+        overflow: hidden;
+        background-color: black;
+        border-radius: 0 0 10px 10px;
+    }
+    & li {
+        float: left;
+        & a {
+            display: block;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            &:hover {
+                background-color: #111;
+            }
+        }
+    }
+}
+
+hr {
+    border:0;
+    border-top: 1px solid #eee;
+    margin-top: 1em;
+    height:1px;
+}
+
+#middle-sidebar {
+    overflow: hidden;
+}
+
+#left-column {
+    background-color: rgba(0,0,0,0.5);
+    /*  padding: 1em 2em 99999px 2em; */
+    padding-bottom: 99999px;
+    margin-bottom: -99999px;
+}
+
+#right-column {
+    background-color: rgba(0,0,0,0.65);
+    /*padding: 1em 2em 99999px 2em; */
+    padding-bottom: 99999px;
+    margin-bottom: -99999px;
+}
+
+section {
+    width: 100%;
+}
+
+.widget {
+    padding: 1em 0em;
+}
+
+#middle-fullwidth {
+    padding: 2em 2em;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.list-blog-header {
+    & hr {
+        margin-top: -0.5em
+    }
+    & .p-name {
+        text-decoration: none;
+    }
+}
+
+.list-item {
+    padding: 1em 1em;
+}
+
+footer {
+    height: 6em;
+    background-color: black;
+    text-align: center;
+    padding: 1em 0;
+    border-radius: 0px 0px 100% 100%;
+    width: 100%;
+}
+
+a:hover i.fa {
+    color: dodgerblue;
+    border: 2px solid dodgerblue;
+}
+
+.fa {
+    color: white;
+    margin: 0.5em 0.5em;
+    padding: 1em 1em;
+    border: 2px solid white;
+    border-radius: 100%;
+}
+
+.prev-next {
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.solo-pipe {
+    text-decoration: bold;
+}

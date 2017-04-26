@@ -1,0 +1,35 @@
+{% set feed_url = blog.url == '/' or blog.url == base_url_relative ? (base_url_relative~'/'~blog.slug) : blog.url %}
+{% set new_base_url = blog.url == '/' ? '' : blog.url %}
+
+<section class="widget" id="logo">
+    <img src="../user/themes/neo-piano-black/images/logo.png" width="100px" height="100px" class="img-responsive logo-img" alt="Matthew Mack's Logo">
+</section>
+
+{% if config.plugins.simplesearch.enabled %}
+<section class="widget">
+    <h4>{{ 'SIDEBAR.SIMPLE_SEARCH.HEADLINE'|t }}</h4>
+    {% include 'partials/simplesearch_searchbox.html.twig' %}
+</section>
+{% endif %}
+
+{% if config.plugins.taxonomylist.enabled %}
+<section class="widget">
+    <h4>{{ 'SIDEBAR.POPULAR_TAGS.HEADLINE'|t }}</h4>
+    {% include 'partials/taxonomylist.html.twig' with {'base_url':new_base_url, 'taxonomy':'tag'} %}
+</section>
+{% endif %}
+
+{% if config.plugins.archives.enabled %}
+<section class="widget">
+    <h4>{{ 'SIDEBAR.ARCHIVES.HEADLINE'|t }}</h4>
+	{% include 'partials/archives.html.twig' with {'base_url':new_base_url} %}
+</section>
+{% endif %}
+
+{% if config.plugins.feed.enabled %}
+<div class="sidebar-content syndicate">
+    <h4>{{ 'SIDEBAR.SYNDICATE.HEADLINE'|t }}</h4>
+    <a class="button" href="{{ feed_url }}.atom"><i class="fa fa-rss-square"></i> Atom 1.0</a>
+    <a class="button" href="{{ feed_url }}.rss"><i class="fa fa-rss-square"></i> RSS</a>
+</div>
+{% endif %}
