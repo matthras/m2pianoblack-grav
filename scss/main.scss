@@ -28,13 +28,6 @@ header {
     text-align: center;
 }
 
-.logo-img {
-    position: relative;
-    margin: 10px 10px 10px 10px;
-    display: inline-block;
-}
-
-
 a {
     color: lightskyblue;
     &:hover {
@@ -166,4 +159,31 @@ blockquote {
 
 p {
     line-height: 1.5em;
+}
+
+input, textarea {
+    display: block;
+    width: 100%;
+    font-size: 1rem;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: .25rem;
+    padding: .5rem .75rem;
+    line-height: 1.25;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    margin: 0.5rem 0;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.logo-img {
+    width: 100px;
+    height: 100px;    
+    position: relative;
+    margin: 10px 10px 10px 10px;
+    display: inline-block;
 }
